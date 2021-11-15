@@ -1,16 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Helmet } from 'react-helmet';
-import {Router} from '@utilities';
-import './App.css';
-
+import './index.css'
+import App from './App'
+import { ContextWrapper } from './components'
 
 ReactDOM.render(
-  <React.Fragment>
-    <Helmet>
-
-    </Helmet>
-    <Router/>
-  </React.Fragment>,
+  <React.StrictMode>
+    <ContextWrapper>
+      <App />
+    </ContextWrapper>
+  </React.StrictMode>,
   document.getElementById('root')
 )

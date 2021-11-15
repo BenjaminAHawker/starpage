@@ -10,10 +10,4 @@ const MainPalette = {
     cultured:"#EFF1ED"
 };
 
-
-
-const MainColors = {
-    MainPalette:MainPalette
-};
-
-export default MainColors;
+export default MainPalette;
