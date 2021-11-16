@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import { ContextWrapper } from './components'
+import { Wrapper } from './components'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContextWrapper>
+    <Wrapper>
       <App />
-    </ContextWrapper>
+    </Wrapper>
   </React.StrictMode>,
   document.getElementById('root')
 )

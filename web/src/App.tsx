@@ -1,26 +1,34 @@
 import React, { useContext } from 'react';
-import { DarkTheme, LiteTheme } from './styles/themes';
+import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import { ThemeContext, WorkSpaceContext } from './data/context';
+import { ThemeContext } from './data/context';
+import { Content, Head, Weather } from './components';
+import { DarkTheme, LiteTheme } from './styles/themes';
+import { ContentWrapper } from './components/Content/content.style';
 
-import { StyledApp } from './styles/styled-components';
-import { Head } from './components';
+// Styled Components
+const Container = styled.div`
+    height:100vh;
+    width:100vw;
+    background-color:${props => props.theme.background};
+    display:flex;
+    flex-direction:column;
+`;
 
 interface props {}
 const App:React.FC<props> = ({
 
 }) => {
-  
+
   const {theme} = useContext(ThemeContext)
-  const {space} = useContext(WorkSpaceContext)
- 
-  console.log(space)
 
   return (
     <ThemeProvider theme={theme === "Dark" ? DarkTheme : LiteTheme}>
-      <StyledApp>
-        <Head/>
-      </StyledApp>
+      <Container>
+        <Content>
+          <Weather/>
+        </Content>
+      </Container>
     </ThemeProvider>
   )
 }
