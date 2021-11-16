@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../../data/context';
+import { ThemeContext, WorkSpaceContext } from '../../data/context';
 import { StyledHead } from '../../styles/styled-components';
+import Pokeball from '../../styles/styled-components/pokeball';
 
 interface props{};
 const Head:React.FC<props> = ({
 
 }) => {
 
-    const { theme,setTheme } = useContext(ThemeContext)
+    const { theme,setTheme } = useContext(ThemeContext);
+    const { space,setSpace } = useContext(WorkSpaceContext);
 
     const changeTheme = () => {
         if(theme === "Dark"){
@@ -17,9 +19,20 @@ const Head:React.FC<props> = ({
         }
     };
 
+    const changeSpace = () => {
+        if(space === "Work"){
+            setSpace("Home")
+        }else{
+            setSpace("Work")
+        }
+    };
+
+
+    
+
     return (
         <StyledHead>
-            <button onClick={changeTheme}>Click</button>
+            <Pokeball/>
         </StyledHead>
     )
 

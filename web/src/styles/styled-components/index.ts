@@ -9,5 +9,8 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledHead = styled.div`
-
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    margin:1em;
 `;
