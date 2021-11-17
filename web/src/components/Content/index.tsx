@@ -1,17 +1,10 @@
-import React from 'react';
-import { ContentWrapper } from './content.style';
+import React from "react";
+import { ContentWrapper } from "./content.style";
 
-interface props{};
+interface props {}
 
-const Content:React.FC<props> = ({
-    children
-}) => {
-
-    return(
-        <ContentWrapper>
-            {children}
-        </ContentWrapper>
-    )
+const Content: React.FC<props> = ({ children }) => {
+  return <ContentWrapper>{children}</ContentWrapper>;
 };
 
-export default Content
+export default Content;
