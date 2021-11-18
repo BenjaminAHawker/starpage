@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { ThemeContext } from "./data/context";
-import { Content, Head, Weather } from "./components";
+import { Content, DateTime, Head, Weather } from "./components";
 import { DarkTheme, LiteTheme } from "./styles/themes";
 
 // Styled Components
@@ -23,6 +23,7 @@ const App: React.FC<props> = ({}) => {
       <Container>
         <Content>
           <Weather />
+          <DateTime/>
         </Content>
       </Container>
     </ThemeProvider>

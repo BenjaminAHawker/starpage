@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const ContentWrapper = styled.div`
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    justify-content:flex-end;
     border: solid .1em ${props => props.theme.frontground};
     width:80%;
-    padding:1em;
     border-radius:5px;
     margin:auto;
+    padding:.5em;
 `;

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const WeatherContainer = styled.div`
     display:flex;
     flex-direction:column;
-    background-color:white;
     padding:.5em;
+    background-color:${props => props.theme.frontground};
+    border-radius:${props=>props.theme.globalradius};
     
 `
 export const TempGroup = styled.div`
@@ -31,4 +32,5 @@ export const WeatherDescriptionGroup = styled.div`
 
 export const City = styled.div`
     font-family:'Indie Flower', cursive;
+    color:white;
 `;

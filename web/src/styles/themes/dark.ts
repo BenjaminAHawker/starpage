@@ -6,6 +6,7 @@ const DarkTheme = {
     backgroundImg:backImg,
     frontground:MainPalette.opal,
     pokeball:'#3b82c4',
+    globalradius:"5%"
 };
 
 export default DarkTheme;
