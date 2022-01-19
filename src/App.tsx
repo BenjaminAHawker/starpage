@@ -29,15 +29,25 @@ const App: FC<any> = ({}) => {
   console.log(style);
 
   return (
-    <ThemeProvider theme={style || {}}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{options.title || "Default"}</title>
-      </Helmet>
-      <AppContainer>
-        <ServiceContainer />
-      </AppContainer>
-    </ThemeProvider>
+    <>
+      {options && (
+        <ThemeProvider theme={style || {}}>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>{options.title || "Default"}</title>
+            <link
+              rel="icon"
+              type="image/svg"
+              href={`/assets/${options.logo}`}
+              sizes="16x16"
+            />
+          </Helmet>
+          <AppContainer>
+            <ServiceContainer />
+          </AppContainer>
+        </ThemeProvider>
+      )}
+    </>
   );
 };
 
